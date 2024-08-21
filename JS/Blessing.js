@@ -1,3 +1,16 @@
+var song = document.getElementById("audio");
+song.volume = 0.1;
+song.currentTime = 67.5;
+
+setTimeout(function(){
+    song.play();
+
+    setTimeout(function(){
+      song.pause();
+      song.currentTime = 67.5;
+    }, 2000);
+}, 14200);
+
 
 $(window).on("load", function () {
   $(window).scroll(function () {
@@ -21,6 +34,6 @@ $(window).on("load", function () {
 });
 
 
-$("button").click(function () {
+$("button").click(function(){
   window.location.replace("CardsPage.html");
 });
